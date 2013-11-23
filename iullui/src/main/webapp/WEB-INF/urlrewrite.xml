@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.0//EN" "urlrewrite3.0.dtd">
+<urlrewrite>
+    <rule>
+        <name>Domain Name Check</name>
+        <condition type="server-name" operator="notequal">(.*)\.iullui.com</condition>
+        <condition type="server-name" operator="notequal">^iullui.com$</condition>
+        <condition type="server-name" operator="notequal">localhost</condition>
+        <from>/(.*)</from>
+        <to type="redirect">http://www.iullui.com/</to>
+    </rule>
+    <rule>
+        <name>Domain Name Check</name>
+        <condition type="server-name" operator="equal">^iullui.com$</condition>
+        <from>^(.*)$</from>
+        <to type="redirect">http://www.iullui.com$1</to>
+    </rule>
+    
+</urlrewrite>

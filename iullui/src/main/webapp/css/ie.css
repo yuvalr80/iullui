@@ -1,0 +1,11 @@
+*+ html .heading h2 {
+	margin-top: expression(this.parentNode.offsetHeight > this.offsetHeight ? ((this.parentNode.offsetHeight-this.offsetHeight)/2 + "px") : "0");
+	display:block;
+}
+*+ html .people-block .recommendation-list .title,
+*+ html .drop .choose-list .title {display:block;}
+*+ html .people-block .recommendation-list .title span,
+*+ html .drop .choose-list .title span {
+	margin-top: expression(this.parentNode.offsetHeight > this.offsetHeight ? ((this.parentNode.offsetHeight-this.offsetHeight)/2 + "px") : "0");
+	display:block;
+}
